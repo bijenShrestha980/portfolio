@@ -1,9 +1,10 @@
 import React from "react";
+import Animate from "../components/animate/animate";
 
 type Props = {};
 
 const Contact = (props: Props) => {
-  return <div>Contact</div>;
+  return <Animate>Contact</Animate>;
 };
 
 export default Contact;

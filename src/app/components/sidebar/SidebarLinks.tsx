@@ -1,27 +1,43 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/router";
-import React from "react";
+import { usePathname } from "next/navigation";
 
-type Props = {};
+import { ContactIcon, FileTextIcon, HomeIcon, SmileIcon } from "../icons/icons";
 
-const navlink: { title: string; link: string; id: number }[] = [
-  { title: "home", link: "/", id: 1 },
-  { title: "about", link: "/about", id: 2 },
-  { title: "contact", link: "/contact", id: 3 },
-  // { title: "portfolio", link: "/portfolio", id: 4 },
+const navlink: {
+  title: string;
+  link: string;
+  id: number;
+  icon: React.JSX.Element;
+}[] = [
+  { title: "home", link: "/", id: 1, icon: <HomeIcon /> },
+  { title: "about", link: "/about", id: 2, icon: <SmileIcon /> },
+  { title: "portfolio", link: "/portfolio", id: 3, icon: <FileTextIcon /> },
+  { title: "contact", link: "/contact", id: 4, icon: <ContactIcon /> },
 ];
 
-const SidebarLinks = (props: Props) => {
-  // const router = useRouter();
-  // console.log(router);
+const SidebarLinks = () => {
+  const pathname = usePathname();
 
   return (
-    <ul className="cursor-pointer flex flex-row md:flex-col">
+    <ul className="cursor-pointer flex flex-row md:flex-col gap-1">
       {navlink.map((item, i) => (
-        <li className="capitalize font-semibold pb-1" key={i}>
-          <Link href={item.link}>{item.title}</Link>
+        <li key={i}>
+          <Link
+            href={item.link}
+            className="pb-1 w-fit custom-transition hover:scale-105 flex flex-col group select-none"
+          >
+            <span className="md:hidden px-2 mb-1 select-none">{item.icon}</span>
+            <p
+              className={`capitalize hidden md:inline-block select-none ${
+                pathname === item.link ? "font-bold" : "font-semibold"
+              }`}
+            >
+              {item.title}
+            </p>
+            <span className="custom-transition h-[2px] w-0 group-hover:w-full bg-brand_primary rounded-lg"></span>
+          </Link>
         </li>
       ))}
     </ul>
