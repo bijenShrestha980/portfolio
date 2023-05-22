@@ -61,8 +61,8 @@ export default function Home() {
             ipsam architecto?
           </p>
           <ul className="flex gap-2">
-            {links.map((item) => (
-              <li>
+            {links.map((item, i) => (
+              <li key={i}>
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                   {item.icon}
                 </a>
