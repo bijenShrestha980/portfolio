@@ -14,11 +14,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className="flex flex-col md:flex-row min-h-screen items-center justify-between">
-          <div className="w-full h-[110px] md:min-h-screen md:basis-1/5">
+        <main className="min-h-screen w-full">
+          <div className="bg-gradient-to-br from-blue-gray-800 to-blue-gray-900 fixed inset-0 z-50 h-[calc(100vh-442px)] md:h-[calc(100vh-32px)] w-full md:w-72 rounded-xl transition-transform duration-300 md:translate-x-0">
             <Sidebar />
           </div>
-          <div className="basis-5/5 md:basis-4/5 flex-initial min-h-screen w-full container flex items-center justify-center">
+          <div className="px-4 pb-12 pt-40 md:pt-12 md:ml-80 min-h-screen flex justify-center items-center">
             {children}
           </div>
         </main>

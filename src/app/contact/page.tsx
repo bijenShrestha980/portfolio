@@ -1,5 +1,5 @@
 import React from "react";
-import Animate from "../components/animate/animate";
+import Animate from "../components/animate/Animate";
 
 type Props = {};
 

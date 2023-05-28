@@ -5,8 +5,8 @@ import {
   GithubIcon,
   InstagramIcon,
   LinkedinIcon,
-} from "./components/icons/icons";
-import Animate from "./components/animate/animate";
+} from "./components/icons/Icons";
+import Animate from "./components/animate/Animate";
 
 export default function Home() {
   const links: {
