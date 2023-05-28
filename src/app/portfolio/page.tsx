@@ -7,7 +7,7 @@ const Portfolio = () => {
   return (
     <div className="flex flex-col gap-10">
       {projects.map((item, i) => (
-        <Animate index={item.id}>
+        <Animate key={i} index={item.id}>
           <div
             className={`flex flex-col xl:flex-row  gap-10 xl:items-center bg-white p-5 rounded-[8px] shadow-sm`}
             key={i}
