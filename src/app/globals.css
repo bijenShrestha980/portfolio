@@ -101,7 +101,7 @@ input::-webkit-inner-spin-button {
 
 @font-face {
   font-family: "Prima";
-  src: url("../assets/fonts/PrimaSansMonoBT-Roman.otf");
+  src: url("../app/assets/fonts/PrimaSansMonoBT-Roman.otf");
 }
 
 @layer utilities {

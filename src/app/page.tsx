@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import pp from "../assets/images/sqirrel.jpg";
+import pp from "./assets/images/sqirrel.jpg";
 import {
   GithubIcon,
   InstagramIcon,

@@ -1,11 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Animate from "../components/animate/Animate";
-import pp from "../../assets/images/sqirrel.jpg";
+import pp from "../assets/images/sqirrel.jpg";
 
-type Props = {};
-
-const About = (props: Props) => {
+const About = () => {
   return (
     <Animate>
       <div className="flex flex-col gap-10 lg:items-center px-10">
