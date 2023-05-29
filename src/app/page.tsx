@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import pp from "./assets/images/sqirrel.jpg";
+import pp from "./assets/images/pp.jpg";
 import {
   GithubIcon,
   InstagramIcon,
@@ -53,12 +53,12 @@ export default function Home() {
           priority={true}
         />
         <div className="flex flex-col gap-6 max-w-[800px]">
-          <h1 className="font-prima">Pole Colionnee</h1>
+          <h1 className="font-prima">Bijen Shrestha</h1>
           <p className="italic">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore
-            praesentium fugit, ullam provident fugiat, alias facere ex vel at
-            illo pariatur sit sapiente accusantium magni possimus esse ratione
-            ipsam architecto?
+            Web Developer specializing in front end development. Experienced
+            with all stages of the development cycle for dynamic web projects.
+            Well-versed in numerous programming languages including HTML,
+            JavaScript(React), CSS(Tailwind).
           </p>
           <ul className="flex gap-2">
             {links.map((item, i) => (

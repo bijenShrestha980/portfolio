@@ -71,7 +71,7 @@ const projects: {
       { title: "js", image: js, id: 3 },
       { title: "tailwind", image: tailwind, id: 4 },
     ],
-    id: 3,
+    id: 4,
   },
 ];
 

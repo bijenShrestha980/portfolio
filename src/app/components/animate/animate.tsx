@@ -17,6 +17,7 @@ const Animate = ({
         duration: index ? 0.5 * index : 0.7,
         ease: "easeInOut",
       }}
+      className="w-full"
     >
       {children}
     </motion.div>

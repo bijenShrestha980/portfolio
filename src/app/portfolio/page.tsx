@@ -5,17 +5,16 @@ import { projects } from "../assets/data/projects";
 
 const Portfolio = () => {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="grid grid-cols-1 gap-6">
       {projects.map((item, i) => (
         <Animate key={i} index={item.id}>
           <div
-            className={`flex flex-col xl:flex-row  gap-10 xl:items-center bg-white p-5 rounded-[8px] shadow-sm`}
-            key={i}
+            className={`flex flex-col xl:flex-row gap-10 xl:items-center bg-white p-5 rounded-[8px] shadow-sm`}
           >
             <a
               href={item.link}
               target="_blank"
-              className="w-full md:w-[450px] max-w-full h-[300px] overflow-hidden rounded-xl cursor-pointer bg-white"
+              className="flex-none w-full md:w-[450px] max-w-full h-[300px] overflow-hidden rounded-xl cursor-pointer bg-white shadow-md"
             >
               <Image
                 src={item.image}
@@ -35,7 +34,7 @@ const Portfolio = () => {
                   {item.techStack.map((item1, j) => (
                     <li
                       key={j}
-                      className="w-[35px] h-[35px] px-1 rounded-[50%] shadow-md overflow-hidden flex justify-center items-center bg-white"
+                      className="w-[35px] h-[35px] px-1 rounded-[50%] shadow-md overflow-hidden flex justify-center items-center bg-white custom-transition cursor-pointer hover:translate-y-[-5px]"
                     >
                       <Image
                         src={item1.image}
