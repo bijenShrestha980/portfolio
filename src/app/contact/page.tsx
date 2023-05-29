@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <Animate>
       <div className="w-full bg-white p-6 rounded-[8px] ">
-        <h5 className="mb-6">Get in Touch</h5>
+        <h3 className="mb-6">Get in Touch</h3>
         <Form />
       </div>
     </Animate>
