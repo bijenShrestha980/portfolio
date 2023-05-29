@@ -44,7 +44,7 @@ const About = () => {
         </div>
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4">
           <h5 className="font-semibold">Tech Stack :</h5>
-          <ul className="flex gap-2">
+          <ul className="flex flex-wrap gap-2">
             {techStack.map((item, j) => (
               <li
                 key={j}

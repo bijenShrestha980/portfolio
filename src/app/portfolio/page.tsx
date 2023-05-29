@@ -34,7 +34,7 @@ const Portfolio = () => {
                   {item.techStack.map((item1, j) => (
                     <li
                       key={j}
-                      className="w-[35px] h-[35px] px-1 rounded-[50%] shadow-md overflow-hidden flex justify-center items-center bg-white custom-transition cursor-pointer hover:translate-y-[-5px]"
+                      className="w-[35px] h-[35px] px-1 rounded-[50%] shadow-md overflow-hidden flex flex-wrap justify-center items-center bg-white custom-transition cursor-pointer hover:translate-y-[-5px]"
                     >
                       <Image
                         src={item1.image}

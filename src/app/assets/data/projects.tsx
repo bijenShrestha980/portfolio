@@ -4,6 +4,7 @@ import demat from "../images/projects/demat.png";
 import trekcard from "../images/projects/trekcard.png";
 import members from "../images/projects/members.png";
 import affix from "../images/projects/affixlink.png";
+import nrna from "../images/projects/nrna.png";
 //
 import immer from "../images/tech/immer.svg";
 import js from "../images/tech/js.svg";
@@ -24,7 +25,8 @@ const projects: {
     title: "demat",
     link: "https://demat.gurkhasfinance.com.np",
     image: demat,
-    description: "https://www.linkedin.com/in/bijen-shrestha-a5282a178/",
+    description:
+      "DEMAT is a Gurkha Finance authorised demat account cloud registration platform where the user can perform all registration, approval, payment, etc throught the application.",
     techStack: [
       { title: "react", image: react, id: 1 },
       { title: "immer", image: immer, id: 2 },
@@ -38,7 +40,7 @@ const projects: {
     link: "https://trekcard.app",
     image: trekcard,
     description:
-      " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore praesentium fugit, ullam provident fugiat, alias facere ex vel at illo pariatur sit sapiente accusantium magni possimus esse ratione ipsam architecto?",
+      "Trekking Recreation Expedition in Khumbu made safer with Trekcard.",
     techStack: [
       { title: "react", image: react, id: 1 },
       { title: "immer", image: immer, id: 2 },
@@ -51,7 +53,8 @@ const projects: {
     title: "nrna members",
     link: "https://members.globalnrna.org/login",
     image: members,
-    description: "https://www.instagram.com/0_0bijen/",
+    description:
+      "An umbrella organization for Nepali Diaspora around the world, NRNA is a global network for people of Nepali origin, working to address their interests, concerns, and welfare.",
     techStack: [
       { title: "react", image: react, id: 1 },
       { title: "redux", image: redux, id: 2 },
@@ -64,7 +67,8 @@ const projects: {
     title: "affixlink",
     link: "https://admin.affixlink.app",
     image: affix,
-    description: "https://www.instagram.com/0_0bijen/",
+    description:
+      "Tap to connect! Share your social media links; Share your book and files; Share your images and videos.",
     techStack: [
       { title: "react", image: react, id: 1 },
       { title: "redux", image: redux, id: 2 },
@@ -72,6 +76,20 @@ const projects: {
       { title: "tailwind", image: tailwind, id: 4 },
     ],
     id: 4,
+  },
+  {
+    title: "NRNA",
+    link: "https://globalnrna.org/",
+    image: nrna,
+    description:
+      "Bringing the Nepali Diaspora together, facilitating the socio-economic development of Nepal",
+    techStack: [
+      { title: "react", image: react, id: 1 },
+      { title: "immer", image: immer, id: 2 },
+      { title: "js", image: js, id: 3 },
+      { title: "sass", image: sass, id: 4 },
+    ],
+    id: 5,
   },
 ];
 
