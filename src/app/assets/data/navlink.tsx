@@ -3,7 +3,7 @@ import {
   FileTextIcon,
   HomeIcon,
   SmileIcon,
-} from "@/app/components/icons/Icons";
+} from "../../components/icons/Icons";
 
 const navlink: {
   title: string;
