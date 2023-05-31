@@ -18,9 +18,11 @@ const Contact = () => {
 
 const Form = () => {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const sendEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault(); // prevents the page from reloading when you hit “Send”
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -37,11 +39,14 @@ const Form = () => {
           if (result.status === 200) {
             toast.success("Email sent !");
             setMessage("Email sent !");
+            setLoading(false);
           }
+          setLoading(false);
         },
         (error) => {
           // show the user an error
           console.log(error);
+          setLoading(false);
         }
       );
   };
@@ -57,12 +62,13 @@ const Form = () => {
           name="user_name"
           className="rounded-[6px] bg-[#f1f5f9] outline-none p-2 text-[#475569] font-semibold"
         />
-        <label htmlFor="email" className="font-semibold">
+        <label htmlFor="user_email" className="font-semibold">
           Email :
         </label>
         <input
           type="email"
-          name="email"
+          name="user_email"
+          required
           className="rounded-[6px] bg-[#f1f5f9] outline-none p-2 text-[#475569] font-semibold"
         />
         <label htmlFor="message" className="font-semibold">
@@ -70,13 +76,15 @@ const Form = () => {
         </label>
         <textarea
           name="message"
+          required
           rows={4}
           className="rounded-[6px] bg-[#f1f5f9] outline-none p-2 text-[#475569] font-semibold mb-4"
         />
         <div className="w-full flex flex-col justify-end items-end ">
           <input
             type="submit"
-            value="Send"
+            value={loading ? `Sending...` : `Send`}
+            disabled={loading ? true : false}
             className="text-white bg-brand_primary font-semibold rounded-[6px] w-[150px] p-2 cursor-pointer custom-transition hover:scale-105"
           />
           {message && <p className="font-semibold">{message}</p>}
