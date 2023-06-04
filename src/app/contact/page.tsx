@@ -17,7 +17,7 @@ const Contact = () => {
 };
 
 const Form = () => {
-  const form = useRef();
+  const ref = React.useRef<HTMLInputElement | string>;
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const sendEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,7 +29,7 @@ const Form = () => {
         "service_lrrtwkj",
         "template_wo3k4ju",
         // @ts-ignore
-        form.current,
+        ref.current,
         process.env.NEXT_PUBLIC_EMAIL_KEY
       )
       .then(
@@ -51,8 +51,11 @@ const Form = () => {
       );
   };
   return (
-    // @ts-ignore
-    <form ref={form} onSubmit={sendEmail} className="w-full">
+    <form
+      ref={ref}
+      onSubmit={(_: React.FormEvent<HTMLFormElement>) => sendEmail}
+      className="w-full"
+    >
       <div className="flex flex-col gap-2">
         <label htmlFor="user_name" className="font-semibold">
           Name :
