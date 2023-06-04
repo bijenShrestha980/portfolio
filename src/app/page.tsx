@@ -5,6 +5,7 @@ import {
   GithubIcon,
   InstagramIcon,
   LinkedinIcon,
+  MailIcon,
 } from "./components/icons/Icons";
 import Animate from "./components/animate/Animate";
 
@@ -32,9 +33,17 @@ export default function Home() {
       ),
     },
     {
+      title: "gmail",
+      link: "mailto:s.bijen93@gmail.com",
+      id: 3,
+      icon: (
+        <MailIcon className="bg-brand_primary text-white rounded-md p-1 hover:scale-105 hover:shadow-md custom-transition" />
+      ),
+    },
+    {
       title: "instagram",
       link: "https://www.instagram.com/0_0bijen/",
-      id: 3,
+      id: 4,
       icon: (
         <InstagramIcon className="bg-brand_primary text-white rounded-md p-1 hover:scale-105 hover:shadow-md custom-transition" />
       ),
