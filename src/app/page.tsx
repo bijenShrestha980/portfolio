@@ -64,9 +64,13 @@ export default function Home() {
         <div className="flex flex-col gap-6 max-w-[800px]">
           <h1 className="font-prima">Bijen Shrestha</h1>
           <p className="italic">
-            Web Developer specializing in front end development with React js.
-            Experienced with all stages of the development cycle for dynamic web
-            projects.
+            A skilled and dedicated frontend web developer with expertise in
+            React.js, seeking challenging opportunities to create highly
+            interactive and user-friendly web applications. I have a passion for
+            creating elegant and efficient user interfaces that deliver an
+            exceptional user experience. With a strong foundation in HTML, CSS,
+            and JavaScript, I am committed to leveraging my knowledge and skills
+            to build dynamic and scalable applications.
           </p>
           <ul className="flex gap-2">
             {links.map((item, i) => (

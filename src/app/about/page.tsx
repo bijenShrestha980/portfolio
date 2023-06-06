@@ -20,12 +20,44 @@ const About = () => {
         <div className="flex flex-col gap-6">
           <h1 className="font-prima">Bijen Shrestha</h1>
           <div className="flex flex-col lg:flex-row gap-4">
-            <p className="italic basis-3/4">
-              Web Developer specializing in front end development. Experienced
-              with all stages of the development cycle for dynamic web projects.
-              Well-versed in numerous programming languages including HTML,
-              JavaScript(React), CSS(Tailwind).
-            </p>
+            <ul className="basis-3/4 flex flex-col list-disc">
+              <li>
+                <p className="italic">
+                  Proficient in React.js and Next.js, including functional
+                  components, state management, and component lifecycle methods.
+                </p>
+              </li>
+              <li>
+                <p className="italic">
+                  Experience with popular React libraries and tools, such as
+                  React Router, Redux, and Axios.
+                </p>
+              </li>
+              <li>
+                <p className="italic">
+                  Familiarity with modern frontend development tools like
+                  Webpack and npm.
+                </p>
+              </li>
+              <li>
+                <p className="italic">
+                  Strong knowledge of RESTful APIs and integrating them into
+                  React applications.
+                </p>
+              </li>
+              <li>
+                <p className="italic">
+                  Experience with version control systems, such as Git, and
+                  collaboration platforms like GitHub.
+                </p>
+              </li>
+              <li>
+                <p className="italic">
+                  Ability to work effectively in a team environment, with
+                  excellent problem-solving and communication skills.
+                </p>
+              </li>
+            </ul>
             <ul className="basis-1/3">
               <li className="flex">
                 <label htmlFor="email" className="font-semibold text-sm">
