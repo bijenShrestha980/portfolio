@@ -64,10 +64,9 @@ export default function Home() {
         <div className="flex flex-col gap-6 max-w-[800px]">
           <h1 className="font-prima">Bijen Shrestha</h1>
           <p className="italic">
-            Web Developer specializing in front end development. Experienced
-            with all stages of the development cycle for dynamic web projects.
-            Well-versed in numerous programming languages including HTML,
-            JavaScript(React), CSS(Tailwind).
+            Web Developer specializing in front end development with React js.
+            Experienced with all stages of the development cycle for dynamic web
+            projects.
           </p>
           <ul className="flex gap-2">
             {links.map((item, i) => (
