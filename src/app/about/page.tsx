@@ -1,22 +1,31 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 
 import Animate from "../components/animate/Animate";
 import pp from "../assets/images/p.jpg";
 import { techStack } from "../assets/data/techStack";
+import Loading from "../loading";
 
 const About = () => {
   return (
     <Animate>
       <div className="flex flex-col gap-10 px-10">
-        <Image
-          src={pp}
-          width={1350}
-          height={1800}
-          alt="Picture of the author"
-          className="rounded-[8px] object-cover object-bottom w-[300px] h-[400px]"
-          priority={true}
-        />
+        <Suspense
+          fallback={
+            <div className="w-[300] h-[400]">
+              <Loading />
+            </div>
+          }
+        >
+          <Image
+            src={pp}
+            width={1350}
+            height={1800}
+            alt="Picture of the author"
+            className="rounded-[8px] object-cover object-bottom w-[300px] h-[400px]"
+            priority={true}
+          />
+        </Suspense>
         <div className="flex flex-col gap-6">
           <h1 className="font-prima">Bijen Shrestha</h1>
           <div className="flex flex-col lg:flex-row gap-4">

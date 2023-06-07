@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Image from "next/image";
 
 import pp from "./assets/images/pp.jpg";
@@ -8,6 +9,7 @@ import {
   MailIcon,
 } from "./components/icons/Icons";
 import Animate from "./components/animate/Animate";
+import Loading from "./loading";
 
 export default function Home() {
   const links: {
@@ -53,14 +55,22 @@ export default function Home() {
   return (
     <Animate>
       <div className="flex flex-col lg:flex-row gap-10 lg:items-center px-10">
-        <Image
-          src={pp}
-          width={200}
-          height={200}
-          alt="Picture of the author"
-          className="rounded-[8px] w-auto h-auto"
-          priority={true}
-        />
+        <Suspense
+          fallback={
+            <div className="w-[256px] h-[256px]">
+              <Loading className="w-[256px] h-[256px]" />
+            </div>
+          }
+        >
+          <Image
+            src={pp}
+            width={200}
+            height={200}
+            alt="Picture of the author"
+            className="rounded-[8px] w-auto h-auto"
+            priority={true}
+          />
+        </Suspense>
         <div className="flex flex-col gap-6 max-w-[800px]">
           <h1 className="font-prima">Bijen Shrestha</h1>
           <p className="italic">

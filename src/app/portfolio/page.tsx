@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import Animate from "../components/animate/Animate";
 import { projects } from "../assets/data/projects";
+import Loading from "../loading";
 
 const Portfolio = () => {
   return (
@@ -16,14 +17,22 @@ const Portfolio = () => {
               target="_blank"
               className="flex-none w-full md:w-[450px] max-w-full h-[300px] overflow-hidden rounded-xl cursor-pointer bg-white shadow-md"
             >
-              <Image
-                src={item.image}
-                width={750}
-                height={1334}
-                alt="Picture of the author"
-                className="transition-[transform] hover:translate-y-[-77%] translate-y-0 duration-[10000ms] rounded-xl"
-                priority={true}
-              />
+              <Suspense
+                fallback={
+                  <div className="w-[450px] h-[605px]">
+                    <Loading className="w-[450px] h-[605px]" />
+                  </div>
+                }
+              >
+                <Image
+                  src={item.image}
+                  width={750}
+                  height={1334}
+                  alt="Picture of the author"
+                  className="transition-[transform] hover:translate-y-[-77%] translate-y-0 duration-[10000ms] rounded-xl"
+                  priority={true}
+                />
+              </Suspense>
             </a>
             <div className="flex flex-col gap-6 max-w-[800px]">
               <h1 className="font-prima capitalize">{item.title}</h1>
