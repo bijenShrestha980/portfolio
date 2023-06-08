@@ -8,7 +8,7 @@ import Animate from "../components/animate/Animate";
 const Contact = () => {
   return (
     <Animate>
-      <div className="w-full bg-white p-6 rounded-[8px] ">
+      <div className="w-full rounded-[8px] bg-white p-6 ">
         <h3 className="mb-6">Get in Touch</h3>
         <Form />
       </div>
@@ -64,7 +64,7 @@ const Form = () => {
         <input
           type="text"
           name="user_name"
-          className="rounded-[6px] bg-[#f1f5f9] outline-none p-2 text-[#475569] font-semibold"
+          className="rounded-[6px] bg-[#f1f5f9] p-2 font-semibold text-[#475569] outline-none"
         />
         <label htmlFor="user_email" className="font-semibold">
           Email :
@@ -73,7 +73,7 @@ const Form = () => {
           type="email"
           name="user_email"
           required
-          className="rounded-[6px] bg-[#f1f5f9] outline-none p-2 text-[#475569] font-semibold"
+          className="rounded-[6px] bg-[#f1f5f9] p-2 font-semibold text-[#475569] outline-none"
         />
         <label htmlFor="message" className="font-semibold">
           Message :
@@ -82,14 +82,14 @@ const Form = () => {
           name="message"
           required
           rows={4}
-          className="rounded-[6px] bg-[#f1f5f9] outline-none p-2 text-[#475569] font-semibold mb-4"
+          className="mb-4 rounded-[6px] bg-[#f1f5f9] p-2 font-semibold text-[#475569] outline-none"
         />
-        <div className="w-full flex flex-col justify-end items-end ">
+        <div className="flex w-full flex-col items-end justify-end ">
           <input
             type="submit"
             value={loading ? `Sending...` : `Send`}
             disabled={loading ? true : false}
-            className="text-white bg-brand_primary font-semibold rounded-[6px] w-[150px] p-2 cursor-pointer custom-transition hover:scale-105"
+            className="custom-transition w-[150px] cursor-pointer rounded-[6px] bg-brand_primary p-2 font-semibold text-white hover:scale-105"
           />
           {message && <p className="font-semibold">{message}</p>}
         </div>

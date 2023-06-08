@@ -10,17 +10,17 @@ const Portfolio = () => {
       {projects.map((item, i) => (
         <Animate key={i} index={item.id}>
           <div
-            className={`flex flex-col xl:flex-row gap-10 xl:items-center bg-white p-5 rounded-[8px] shadow-sm`}
+            className={`flex flex-col gap-10 rounded-[8px] bg-white p-5 shadow-sm xl:flex-row xl:items-center`}
           >
             <a
               href={item.link}
               target="_blank"
-              className="flex-none w-full md:w-[450px] max-w-full h-[300px] overflow-hidden rounded-xl cursor-pointer bg-white shadow-md"
+              className="h-[300px] w-full max-w-full flex-none cursor-pointer overflow-hidden rounded-xl bg-white shadow-md md:w-[450px]"
             >
               <Suspense
                 fallback={
-                  <div className="w-[450px] h-[605px]">
-                    <Loading className="w-[450px] h-[605px]" />
+                  <div className="h-[605px] w-[450px]">
+                    <Loading className="h-[605px] w-[450px]" />
                   </div>
                 }
               >
@@ -29,12 +29,12 @@ const Portfolio = () => {
                   width={750}
                   height={1334}
                   alt="Picture of the author"
-                  className="transition-[transform] hover:translate-y-[-77%] translate-y-0 duration-[10000ms] rounded-xl"
+                  className="translate-y-0 rounded-xl transition-[transform] duration-[10000ms] hover:translate-y-[-77%]"
                   priority={true}
                 />
               </Suspense>
             </a>
-            <div className="flex flex-col gap-6 max-w-[800px]">
+            <div className="flex max-w-[800px] flex-col gap-6">
               <h1 className="font-prima capitalize">{item.title}</h1>
               <p className="italic">{item.description}</p>
               <div className="flex items-center gap-4">
@@ -43,7 +43,7 @@ const Portfolio = () => {
                   {item.techStack.map((item1, j) => (
                     <li
                       key={j}
-                      className="w-[35px] h-[35px] px-1 rounded-[50%] shadow-md overflow-hidden flex flex-wrap justify-center items-center bg-white custom-transition cursor-pointer hover:translate-y-[-5px]"
+                      className="custom-transition flex h-[35px] w-[35px] cursor-pointer flex-wrap items-center justify-center overflow-hidden rounded-[50%] bg-white px-1 shadow-md hover:translate-y-[-5px]"
                     >
                       <Image
                         src={item1.image}

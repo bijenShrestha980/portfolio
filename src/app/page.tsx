@@ -23,7 +23,7 @@ export default function Home() {
       link: "https://github.com/bijenShrestha980",
       id: 1,
       icon: (
-        <GithubIcon className="bg-brand_primary text-white rounded-md p-1 hover:scale-105 hover:shadow-md custom-transition" />
+        <GithubIcon className="custom-transition rounded-md bg-brand_primary p-1 text-white hover:scale-105 hover:shadow-md" />
       ),
     },
     {
@@ -31,7 +31,7 @@ export default function Home() {
       link: "https://www.linkedin.com/in/bijen-shrestha-a5282a178/",
       id: 2,
       icon: (
-        <LinkedinIcon className="bg-brand_primary text-white rounded-md p-1 hover:scale-105 hover:shadow-md custom-transition" />
+        <LinkedinIcon className="custom-transition rounded-md bg-brand_primary p-1 text-white hover:scale-105 hover:shadow-md" />
       ),
     },
     {
@@ -39,7 +39,7 @@ export default function Home() {
       link: "mailto:s.bijen93@gmail.com",
       id: 3,
       icon: (
-        <MailIcon className="bg-brand_primary text-white rounded-md p-1 hover:scale-105 hover:shadow-md custom-transition" />
+        <MailIcon className="custom-transition rounded-md bg-brand_primary p-1 text-white hover:scale-105 hover:shadow-md" />
       ),
     },
     {
@@ -47,18 +47,18 @@ export default function Home() {
       link: "https://www.instagram.com/0_0bijen/",
       id: 4,
       icon: (
-        <InstagramIcon className="bg-brand_primary text-white rounded-md p-1 hover:scale-105 hover:shadow-md custom-transition" />
+        <InstagramIcon className="custom-transition rounded-md bg-brand_primary p-1 text-white hover:scale-105 hover:shadow-md" />
       ),
     },
   ];
 
   return (
     <Animate>
-      <div className="flex flex-col lg:flex-row gap-10 lg:items-center px-10">
+      <div className="flex flex-col gap-10 px-10 lg:flex-row lg:items-center">
         <Suspense
           fallback={
-            <div className="w-[256px] h-[256px]">
-              <Loading className="w-[256px] h-[256px]" />
+            <div className="h-[256px] w-[256px]">
+              <Loading className="h-[256px] w-[256px]" />
             </div>
           }
         >
@@ -67,11 +67,11 @@ export default function Home() {
             width={200}
             height={200}
             alt="Picture of the author"
-            className="rounded-[8px] w-auto h-auto"
+            className="h-auto w-auto rounded-[8px]"
             priority={true}
           />
         </Suspense>
-        <div className="flex flex-col gap-6 max-w-[800px]">
+        <div className="flex max-w-[800px] flex-col gap-6">
           <h1 className="font-prima">Bijen Shrestha</h1>
           <p className="italic">
             A skilled and dedicated frontend web developer with expertise in

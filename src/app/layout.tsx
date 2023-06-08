@@ -18,10 +18,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main className="min-h-screen w-full">
-          <div className="fixed bottom-0 md:inset-0 z-50 h-fit md:h-screen w-full md:w-72 rounded-xl transition-transform duration-300 md:translate-x-0">
+          <div className="fixed bottom-0 z-50 h-fit w-full rounded-xl transition-transform duration-300 md:inset-0 md:h-screen md:w-72 md:translate-x-0">
             <Sidebar />
           </div>
-          <div className="pl-4 pr-4 md:pr-10 pb-28 pt-12 md:pb-12 md:pt-12 md:ml-80 min-h-screen flex justify-center items-center">
+          <div className="flex min-h-screen items-center justify-center pb-28 pl-4 pr-4 pt-12 md:ml-80 md:pb-12 md:pr-10 md:pt-12">
             {children}
           </div>
         </main>
