@@ -74,13 +74,7 @@ export default function Home() {
         <div className="flex max-w-[800px] flex-col gap-6">
           <h1 className="font-prima">Bijen Shrestha</h1>
           <p className="italic">
-            A frontend web developer with expertise in React.js, seeking
-            challenging opportunities to create highly interactive and
-            user-friendly web applications. I have a passion for creating
-            elegant and efficient user interfaces that deliver an exceptional
-            user experience. With a strong foundation in HTML, CSS, and
-            JavaScript, I am committed to leveraging my knowledge and skills to
-            build dynamic and scalable applications.
+           As a highly skilled frontend developer specializing in React.js and React Native, I excel in creating dynamic, responsive, and user-friendly web and mobile applications. My expertise lies in leveraging modern JavaScript frameworks to build scalable and maintainable applications that provide exceptional user experiences across various platforms. With a keen eye for design and a strong foundation in performance optimization, I am dedicated to crafting elegant solutions that meet the diverse needs of users. I am passionate about staying up-to-date with the latest industry trends and technologies, continuously striving to improve my skills and deliver high-quality, innovative products.
           </p>
           <ul className="flex gap-2">
             {links.map((item, i) => (
