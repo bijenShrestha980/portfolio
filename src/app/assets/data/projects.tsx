@@ -53,7 +53,7 @@ const projects: {
   {
     id: 3,
     title: "nrna members",
-    link: "https://members.globalnrna.org/login",
+    link: "https://members.globalnrna.org/membership_form/personalInformation",
     image: members,
     description:
       "An umbrella organization for Nepali Diaspora around the world, NRNA is a global network for people of Nepali origin, working to address their interests, concerns, and welfare.",
